@@ -1,0 +1,436 @@
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	/*display: inline-block;  adde test*/
+}
+
+nav {
+	display: flex; /*the div and the ul next to each other!!!!!!!!!!!!!!*/
+	justify-content: space-around; /*more space btw*/
+	align-items: center; /*center vertically*/
+	min-height: 8vh;
+	background-color: #5d4954;
+	font-family: 'Poppins', sans-serif;
+	/*border-radius: 8px;*/ /*creates a radius for both index and profile page, only want profile page*/
+}
+
+.content {
+	padding: 29px;
+}
+
+
+
+
+/**************************************************************************************/
+
+.main_container {
+	position: relative; /*main class has position relative*/
+	color: black;
+}
+
+.main_container img {
+	position: absolute;
+	filter: grayscale(100%);
+	opacity: 0.1;
+	width: 100%;
+	height: 80vh;
+}
+
+.navmenu {
+	position: absolute; /*this class is within maincontainer class and position absolute to the right of the maincontainer class*/
+	width: 60%;
+	right: 2%;
+	top: 8px;
+}
+
+.navmenu nav{
+	border-radius: 8px; /*create radius for profile only and not the index page*/
+}
+
+
+.flex_container {
+	position: absolute;
+	display: flex; /*will put the text section and side image side-by-side */
+	margin: 5%;
+	flex-direction: row;
+	top: 45px;
+}
+
+.texten {
+	width: 60%;
+	padding: 15px;
+	border: 2px solid #463;
+	border-radius: 25px;
+	margin-right: 15%;
+}
+
+.texten h2 {
+	color: rgb(0,0,255);
+}
+
+.sideimage {
+	right: 1%;
+}
+
+.sideimage img{
+	filter: grayscale(0%);
+	opacity: 1;
+	width: 25%;
+	height: auto;
+	border: 2px solid #463;
+	border-radius: 25px;
+}
+
+
+/**************************************************************************************/
+/*
+.palmtrees {	
+	/*background-image: url("../images/palmtrees.jpg");
+	position: absolute;
+	filter: grayscale(100%);
+	opacity: 0.5;
+	height: 100vh;
+
+}*/
+/**************************************************************************************/
+
+
+
+
+.logo {
+	color: rgb(256,256,256);
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	font-size: 26px;
+}
+
+.nav-links {
+	display: flex; /*each link next to each other*/
+	justify-content: space-around;
+	width: 40%;
+}
+
+.nav-links li {
+	list-style: none; /*no bullet points*/
+}
+
+.nav-links a {
+	color: rgb(226,226,226);
+	text-decoration: none; /*no underline*/
+	letter-spacing: 3px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.nav-profile {
+	display: flex;
+	justify-content: space-around;
+	width: 75%;
+	border-radius: 8px;
+}
+
+.nav-profile a {
+	font-size: 12px;
+}
+
+.background img {
+	width: 100%;
+	height: 35vh;
+}
+
+
+
+/*
+About z-index:
+https://www.freecodecamp.org/news/4-reasons-your-z-index-isnt-working-and-how-to-fix-it-coder-coder-6bc05f103e6c/;
+*/
+
+.profile {
+	position: absolute; /*must be absoulte, the relatie does not put it on top of the images*/
+	z-index: 1; /*without this the image looks fine but the hover/clickbutton only works on top half of the image otherwise*/
+	left: 6%;
+	top: 20%;
+}
+
+.profile img{
+	width: 140px;
+	height: 170px;
+	transition: 0.3s ease;
+	border-radius: 8%;
+	border: 5px solid #555;
+	z-index: 1;
+/*	filter: grayscale(100%);*/
+}
+
+.profile img:hover {
+	transform: scale(1.1);
+}
+
+.profile img:active {
+	transform: scale(1.4);
+}
+
+
+.profilename {
+	color: rgb(0,0,0);
+	font-size: 24px;
+	text-align: center;
+}
+
+	
+
+.profilebtn {
+			
+}
+
+
+
+.burger {
+	display: none;
+}
+
+.burger div {
+	width: 25px;
+	height: 3px;
+	background-color: rgb(226,226,226);
+	margin-top: 5px;
+	transition: all 0.3s ease;
+}
+
+
+
+/************************************************************************************************/
+
+footer {
+	display: flex;
+	/*justify-content: space-around;*/
+	min-height: 25vh;
+	background-color: rgb(79,79,79);
+	font-family: 'Poppins', sans-serif;
+	color: rgb(255,255,255);
+}
+
+footer ul {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	padding: 15px;
+	padding-left: 7%;
+}
+
+footer ul li {
+	margin: 15px;
+}
+
+.social ul {
+	display: flex; /*icons side-by-side*/
+	flex-direction: row;  /*icons side-by-side*/
+	position: absolute;
+	padding-top: 55px;
+	right: 8%;
+}
+
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+
+/* Add a hover effect if you want */
+.fa:hover {
+  transform: scale(1.3);
+  transition: transform 0.5s;
+}
+
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #55ACEE;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-instagram {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-snapchat {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.profilebtn {
+	display: none;
+}
+
+
+/***********************************************************************************************/
+
+
+::-webkit-scrollbar{
+	width: 25px;
+}
+
+
+::-webkit-scrollbar-thumb{
+	border-radius: 30px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ff8a00), to(#da1b60));
+	box-shadow: inset 2px 2px 2px rgba(255,255,255,0.25), inset -2px -2px -2px rgba(0,0,0,0.25);
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background: -webkit-gradient(linear, left top, left bottom, from(#0033ff), to(#ff8a00));
+}
+   
+::-webkit-scrollbar-track{
+	background: linear-gradient(to right, #201c29, #201c29 1px, #100e17 1px, #100e17);
+}
+
+
+
+/***********************************************************************************************/
+
+@media screen and (max-width: 768px) 
+{
+	
+	nav {
+		background-color: #5d4954;
+	}
+	
+	body {
+		overflow-x: hidden; 
+	}
+
+	.nav-links {
+			position: absolute;
+			right: 0px;
+			height: 92vh; /*gives full screen, noe 8vh above 92 and 8*/
+			top: 8vh;
+			background-color: #5d4954;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 50%;
+			transform: translateX(100%);/*moves the container off the screen*/
+			transition: transform 0.5s ease-in;/*nav-active slowly display*/
+	}
+
+	.nav-links li {
+		opacity: 100;
+	}
+
+	.navmenu {
+		display: none;
+	}
+
+	.navmenu .nav-links {
+		display: none;
+	}
+
+
+	.burger {
+		display: block;
+	}
+
+	.sideimage {
+		display: none;
+	}
+
+
+	.profile {
+		position: absolute; /*must be absoulte, the relatie does not put it on top of the images*/
+		z-index: 1; /*without this the image looks fine but the hover/clickbutton only works on top half of the image otherwise*/
+		left: 40%;
+		top: 2%;
+	}
+
+
+	.profilebtn {
+		display: block;
+		position: absolute;
+		transform: rotate(90deg);
+		left: 7%;
+		top: 10%;
+		
+		transition: transform 1s;
+	}
+
+
+
+	.profilebtn img {
+		width: 80px;
+	}
+
+
+	.texten {
+		width: 85%;
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+
+
+} 
+
+
+
+/***********************************************************************************************/
+
+	
+.nav-active {
+	transform: translateX(0%);
+}
+
+
+/***********************************************************************************************/
+
+
+@keyframes navLinkFade {
+	from{
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+/***********************************************************************************************/
+
+
+.toggle .line1{
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+	opacity: 0;
+}
+
+.toggle .line3{
+	transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+
+
+
+
+
